@@ -182,6 +182,7 @@ MonoBehaviour:
   ballLine: {fileID: 1541808635}
   xInput: 0
   force: 50
+  camera: {fileID: 963194225}
 --- !u!1 &251717233
 GameObject:
   m_ObjectHideFlags: 0
