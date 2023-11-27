@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,6 +18,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float force;
 
     [SerializeField] private GameObject camera;
+    [SerializeField] private TMP_Text scoreText;
     
     // Start is called before the first frame update
     void Start()
