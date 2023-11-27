@@ -29,7 +29,7 @@ public class GameManager : MonoBehaviour
         CameraBehindBall();
         
         //set balls on the table
-        SetBalls(BallColors.White, 0);
+        //SetBalls(BallColors.White, 0);
         SetBalls(BallColors.Red, 1);
         SetBalls(BallColors.Yellow, 2);
         SetBalls(BallColors.Green, 3);
@@ -37,6 +37,8 @@ public class GameManager : MonoBehaviour
         SetBalls(BallColors.Blue, 5);
         SetBalls(BallColors.Pink, 6);
         SetBalls(BallColors.Black, 7);
+        
+        UpdatedScoreText();
     }
 
     // Update is called once per frame
@@ -88,6 +90,12 @@ public class GameManager : MonoBehaviour
         
         cueBall.transform.eulerAngles = Vector3.zero;
         CameraBehindBall();
-        camera.transform.eulerAngles = new Vector3(40f, 0f,0f);
+        camera.transform.eulerAngles = new Vector3(50f, 0f,0f);
+        ballLine.SetActive(true);
+    }
+    
+    public void UpdatedScoreText()
+    {
+        scoreText.text = $"Player score: {PlayerScore}";
     }
 }
